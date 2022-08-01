@@ -1,0 +1,37 @@
+---
+
+- name: run shell script - Blacklist CD-ROM
+  become: yes
+  script: Blacklist_CDROM.sh
+  args: 
+    executable: /bin/bash
+
+- name: run shell script - Blacklist Firewire
+  become: yes
+  script: blacklist_Firewire.sh
+  args: 
+    executable: /bin/bash
+
+- name: run shell script - Blacklist USB
+  become: yes
+  script: blacklistUSB.sh
+  args: 
+    executable: /bin/bash
+
+- name: run shell script - Configure USBGuard
+  become: yes
+  script: Configure_USBGuard.sh
+  args: 
+    executable: /bin/bash
+
+- name: run shell script - Install Firewalld
+  become: yes
+  script: install_firewalld.sh
+  args: 
+    executable: /bin/bash
+
+- name: run shell script - ssh hardening
+  become: yes
+  script: ssh_hardening.sh
+  args: 
+    executable: /bin/bash
