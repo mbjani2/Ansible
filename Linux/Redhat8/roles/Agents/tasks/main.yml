@@ -1,0 +1,24 @@
+---
+- name: Deploy Qualys Agent
+  become: true
+  script: DeployingQualysAgent.sh.sh
+  args: 
+    executable: /bin/bash
+
+- name: Deply Log Analytics
+  become: true
+  script: LogAnalytics.sh
+  args: 
+    executable: /bin/bash
+
+- name: Microsoft Defender
+  become: true
+  script: MDELinuxScript.sh
+  args: 
+    executable: /bin/bash
+
+- name: Install McAfee
+  become: true
+  script: mcafee.sh
+  args: 
+    executable: /bin/bash
